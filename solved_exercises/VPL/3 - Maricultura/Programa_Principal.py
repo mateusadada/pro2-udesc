@@ -4,6 +4,6 @@ from Janela import Janela
 
 ##################################################
 
-## Questão 11:  (Implemente o programa principal)
+# Questão 11:  (Implemente o programa principal)
 
 ##################################################

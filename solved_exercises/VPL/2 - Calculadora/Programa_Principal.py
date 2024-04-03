@@ -4,6 +4,6 @@ from Janela import Janela
 
 ##################################################
 
-## Questão 14: (Crie o programa principal)
+# Questão 14: (Crie o programa principal)
 
 ##################################################
