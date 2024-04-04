@@ -72,7 +72,7 @@ class Janela(QWidget): # Questão 01: (Complete o código que declara a classe)
             n1=float(self.__LEd_valor1.text().replace(',', '.'))
             n2=float(self.__LEd_valor2.text().replace(',', '.'))
             total= n1 / n2
-            self.__LEd_result.setText("%04.2f" % total)
+            self.__LEd_result.setText("%5.2f" % total)
         except ValueError as ve:
             QMessageBox.critical(None, "Janela de Erro #1", "Voce deve digitar valores numéricos")
 
