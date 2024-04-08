@@ -33,21 +33,21 @@ class Janela(QWidget): # (Complete o código que declara a classe Janela)
         self.inicialize()
 
     def total_producao(self):
-        # Questão 03: (Criar o evento que calcula o total da produção por região
+        # Questão 03: (Criar o evento que calcula o total da produção por região)
         pass
     
     def maior_regiao(self):
-        # Questão 04: (Criar o evento que identifica a região onde há maior produção
+        # Questão 04: (Criar o evento que identifica a região onde há maior produção)
         pass
     
     def closeEvent(self, event):
-        # Questão 05: (Qual o comando que encerra o programa no canto da tela?
+        # Questão 05: (Qual o comando que encerra o programa no canto da tela?)
         print("Destruindo janela...")
         self.destroy()
         sys.exit(0)
 
     def action_Bt_Calc(self):
-        # Questão 06: (Chamar os eventos que fazem os cálculos citados nas Questões 03 e 04
+        # Questão 06: (Chamar os eventos que fazem os cálculos citados nas Questões 03 e 04)
         pass
 
     def inicialize(self):
