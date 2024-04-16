@@ -38,6 +38,10 @@ The exercises were solved within the [VPL](https://vpl.dis.ulpgc.es/) because of
 
 Used during the evolution of exercises:
 
+- Graphical interface.
+- Data manipulation.
+- Event handling.
+
 ## 📋 Prerequisites
 
 You need to have the Python language on your machine along with an IDE (Integrated Development Environment) or a website that can run the codes. For example:
