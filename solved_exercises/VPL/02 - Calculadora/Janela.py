@@ -3,8 +3,6 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 
-##################################################
-
 class Janela(QWidget): # Questão 01: (Complete o código que declara a classe)
     __Lb_valor1=None
     __Lb_valor2=None
@@ -78,19 +76,19 @@ class Janela(QWidget): # Questão 01: (Complete o código que declara a classe)
 
     def inicialize(self):
         Grid=QGridLayout()
-        
+
         # Questão 08: Realize a alocação dos componentes gráficos)
         self.__Lb_valor1=QLabel(self, text="Valor1:")
         self.__Lb_valor2=QLabel(self, text="Valor2:")
         self.__Lb_result=QLabel(self, text="Resultado:")
-        
+
         self.__LEd_valor1=QLineEdit(self, width=52)
         self.__LEd_valor2=QLineEdit(self, width=52)
         self.__LEd_result=QLineEdit(self, width=52)
-        
+
         p1 = self.palette()
         p1.setColor(self.backgroundRole(), Qt.yellow)
-        
+
         self.__Lb_valor1.setAutoFillBackground(True)
         self.__Lb_valor1.setPalette(p1)
 
@@ -99,24 +97,23 @@ class Janela(QWidget): # Questão 01: (Complete o código que declara a classe)
 
         self.__Lb_result.setAutoFillBackground(True)
         self.__Lb_result.setPalette(p1)
-        
+
         self.__Bt_adic=QPushButton(self, text='Adic')
         # Questão 09: (Conectar o botão Bt_adic ao evento que realiza a adição dos valores numéricos)
         self.__Bt_adic.clicked.connect(self.action_Bt_adic)
-        
+
         self.__Bt_sub = QPushButton(self, text='Sub')
         # Questão 10: (Conectar o botão Bt_sub ao evento que realiza a subtração dos valores numéricos)
         self.__Bt_sub.clicked.connect(self.action_Bt_sub)
-        
+
         self.__Bt_mult = QPushButton(self, text='Mult')
         # Questão 11: (Conectar o botão Bt_mult ao evento que realiza a multiplicação dos valores numéricos)
         self.__Bt_mult.clicked.connect(self.action_Bt_mult)
-        
+
         self.__Bt_div = QPushButton(self, text='Div')
         # Questão 12: (Conectar o botão Bt_div ao evento que realiza a divisão dos valores numéricos)
         self.__Bt_div.clicked.connect(self.action_Bt_div)
-        
-        ############# Grid #############
+
         # Questão 13: (Acrescentar os componentes gráficos na Tela)
         Grid.addWidget(self.__Lb_valor1, 0, 0)
         Grid.addWidget(self.__Lb_valor2, 1, 0)
@@ -125,13 +122,11 @@ class Janela(QWidget): # Questão 01: (Complete o código que declara a classe)
         Grid.addWidget(self.__LEd_valor1, 0, 1, 1, 4)
         Grid.addWidget(self.__LEd_valor2, 1, 1, 1, 4)
         Grid.addWidget(self.__LEd_result, 3, 1, 1, 4)
-        
+
         Grid.addWidget(self.__Bt_adic, 2, 1)
         Grid.addWidget(self.__Bt_sub, 2, 2)
         Grid.addWidget(self.__Bt_mult, 2, 3)
         Grid.addWidget(self.__Bt_div, 2, 4)
-        
+
         self.setLayout(Grid)
         self.show()
-
-##################################################

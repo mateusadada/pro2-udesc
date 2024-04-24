@@ -3,9 +3,7 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 
-########################################################
-
-class Janela(QWidget): ## (Complete o código que declara a classe Janela)
+class Janela(QWidget): # (Complete o código que declara a classe Janela)
     __Lb_Nome = None
     __Lb_Telefone = None    
     __Lb_Email = None
@@ -15,7 +13,7 @@ class Janela(QWidget): ## (Complete o código que declara a classe Janela)
     __LEd_Email = None
     __LEd_Endereco = None
 
-    ## Questão 02: (Criar o construtor da classe)
+    # Questão 02: (Criar o construtor da classe)
     def __init__(self, Str="Janela", px=0, py=0, dx=640, dy=480, cor="orange"):
         super().__init__()
         self.setWindowTitle(Str)
@@ -29,19 +27,19 @@ class Janela(QWidget): ## (Complete o código que declara a classe Janela)
         self.inicialize()
 
     def closeEvent(self, event):
-        ## Questão 03: (Qual o comando que encerra o programa no canto da tela?)
+        # Questão 03: (Qual o comando que encerra o programa no canto da tela?)
         sys.exit(0)
 
     def inicialize(self):
         Grid=QGridLayout()
-        
-        ## Questão 04: (Alocar os componentes gráficos)
+
+        # Questão 04: (Alocar os componentes gráficos)
         self.__Lb_Nome=QLabel(self, text="Nome:")
         self.__Lb_Telefone=QLabel(self, text="Telefone:")
         self.__Lb_Email=QLabel(self, text="Email:")
         self.__Lb_Endereco=QLabel(self, text="Endereço:")
 
-        ## Questão 05: (Pintar os componentes gráficos com Palette)
+        # Questão 05: (Pintar os componentes gráficos com Palette)
         p1 = self.palette()
         p1.setColor(self.backgroundRole(), Qt.yellow)
 
@@ -62,7 +60,7 @@ class Janela(QWidget): ## (Complete o código que declara a classe Janela)
         self.__LEd_Email=QLineEdit(self, width=52)
         self.__LEd_Endereco=QLineEdit(self, width=52)
 
-        ## Questão 06: (Acrescentar na tela os componentes gráficos)
+        # Questão 06: (Acrescentar na tela os componentes gráficos)
 
         Grid.addWidget(self.__Lb_Nome, 0, 0)
         Grid.addWidget(self.__Lb_Telefone, 1, 0)
@@ -76,5 +74,3 @@ class Janela(QWidget): ## (Complete o código que declara a classe Janela)
 
         self.setLayout(Grid)
         self.show()
-
-########################################################
