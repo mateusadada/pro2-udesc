@@ -13,7 +13,7 @@ class Janela(QWidget): # (Complete o código que declara a classe Janela)
     # Questão 08: (Criar o construtor da classe Janela)
     def __init__(self, Str="Janela", x1=400, y1=200, dx=640, dy=480, cor="orange"):
         super().__init__()
-
+        
         self.setWindowTitle(Str)
         self.setGeometry(x1, y1, dx, dy)
 
@@ -33,9 +33,9 @@ class Janela(QWidget): # (Complete o código que declara a classe Janela)
 
     def action_executar(self):
         # Questão 10: (Criar o código para iniciar a Thread chamando
-        #  os métodos adequados da classe ThreadBalde)
+        # os métodos adequados da classe ThreadBalde)
         if not self.__MeuBalde.isRunning():
-            self.__MeuBalde.iniciar(5)
+            self.__MeuBalde.iniciar(3000)
             self.__Bt1.setText("Parar")
         else:
             self.__Bt1.setText("Iniciar")
@@ -49,17 +49,17 @@ class Janela(QWidget): # (Complete o código que declara a classe Janela)
         self.__PBar.setOrientation(Qt.Vertical)
         self.__PBar.setGeometry(0,0,300,25)
         self.__PBar.setMaximum(100)
-
+        
         self.__LEd1 = QLineEdit()
         self.__Bt1 = QPushButton('Parar')
-
-        # Questão 12: (Associar o botão Bt1 ao evento que inicia e para a Thread)
-        self.__Bt1.clicked.connect(self.action_executar)
 
         # Questão 13: (Acrescentar na tela todos os componentes gráficos)
         Grid.addWidget(self.__PBar, 0, 0, 4, 1)
         Grid.addWidget(self.__LEd1, 1, 1, 1 ,1)
         Grid.addWidget(self.__Bt1, 2, 1, 1, 1)
+        
+        # Questão 12: (Associar o botão Bt1 ao evento que inicia e para a Thread)
+        self.__Bt1.clicked.connect(self.action_executar)
 
         self.__MeuBalde=ThreadBalde(self.__LEd1, self.__PBar)
 

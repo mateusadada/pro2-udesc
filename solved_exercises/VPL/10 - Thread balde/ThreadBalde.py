@@ -35,13 +35,16 @@ class ThreadBalde:
         return True if self.__Thr else False
 
     def run(self):
-        # Questão 05: (Criar o método que realize a ThreadBalde)
-        # self.__LEd.setText("Tchaise")
         try:
-            while self.__Total > 0:
-                self.__PBar.setValue(self.__Total)
-                self.__Total -= 1
-                time.sleep(1)
-            self.__LEd.setText("Concluído")
+            while self.isRunning():
+                for valor in range(101):
+                    self.__PBar.setValue(valor)
+                    self.__LEd.setText(str(valor))
+                    time.sleep(0.04)
+
+                for valor in range(100, -1, -1):
+                    self.__PBar.setValue(valor)
+                    self.__LEd.setText(str(valor))
+                    time.sleep(0.04)
         except Exception as e:
             print("Erro na execução da thread:", e)
