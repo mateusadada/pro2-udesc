@@ -29,5 +29,5 @@ except IOError:
 except FileNotFoundError:
     print('Arquivo não encontrado')
 
-# Questão 04: (Crie o código necessário para encerrar o programa)
+# Questão 04: (crie o código necessário para encerrar o programa)
 sys.exit(0)
