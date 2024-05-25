@@ -1,3 +1,4 @@
+import random
 import threading
 import time
 
@@ -15,21 +16,29 @@ class ThreadSchlacht:
 
     def iniciar(self, Total_a):
         ## Questão 02:  (Criar o método que inicia a ThreadSchlacht)
-        self.__Total = Total_a
-        self.__Thr = threading.Thread(target=self.run)
-        self.__Thr.start()
-
+        try:
+            if (self.__Thr is None):
+                self.__Total = Total_a
+                self.__Thr = threading.Thread(target=self.run)
+                self.__Thr.start()
+        except Exception as ex:
+            print('Error: unable to start thread')
+        
     def parar(self):
         ## Questão 03:  (Criar o método que encerra a ThreadSchlacht)
-        self.__Total = 0
-        self.__Thr = None
+        try:
+            self.__Total = 0
+            self.__Thr = None
+        except Exception as ex:
+            print('Error: unable to stop thread')
 
     def run(self):
         ## Questão 04:  (Criar o método que realiza a ThreadSchlacht)
-        while self.__Total >= 0:
-            self.__LEd.setText(str(int(self.__LEd.text()) + 1))
-            time.sleep(4)
-            
-            self.__Total += -1
+        ii = 0
+        while ii < self.__Total:
+            ii += 1
+            self.__LEd.setText("%d" % ii)
+            tempo = random.random()
+            time.sleep(tempo)
 
 ##################################################
