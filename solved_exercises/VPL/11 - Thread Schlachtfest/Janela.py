@@ -3,14 +3,12 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from ThreadSchlacht import ThreadSchlacht
 
-##################################################
-
 class Janela(QWidget):  ## (Complete o código que declara a classe Janela)
-    __LEd1=None
+    __LEd1 = None
     __LEd2 = None
     __LEd3 = None
-    __Bt_Abertura=None
-    __Bt_Fechamento=None
+    __Bt_Abertura = None
+    __Bt_Fechamento = None
     __Barraca1 = None
     __Barraca2 = None
     __Barraca3 = None
@@ -83,5 +81,3 @@ class Janela(QWidget):  ## (Complete o código que declara a classe Janela)
 
         self.setLayout(Grid)
         self.show()
-
-##################################################
