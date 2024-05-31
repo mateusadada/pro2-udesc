@@ -2,8 +2,6 @@ import datetime
 import threading
 import time
 
-########################################################
-
 class ThreadClock:
     __Total = None
     __LEd = None
@@ -46,5 +44,3 @@ class ThreadClock:
             self.__LEd.setText(time_str)
             time.sleep(1)
         self.__Thr = None
-
-########################################################
