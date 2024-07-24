@@ -1,6 +1,3 @@
-> [!IMPORTANT]
-> The repository and README are under development.
-
 <h1 align="center">Programming 2 - UDESC</h1>
 <div align="center"><i>A complete list of solved exercises</i><br><br>
 <a href="https://github.com/mateusadada/pro2-udesc/stargazers"><img src="https://img.shields.io/github/stars/mateusadada/pro2-udesc" alt="Stars Badge"/></a>
@@ -24,23 +21,19 @@
 
 ## 🚀 Starting
 
-> [!NOTE]
-> In development
-
 This repository contains the solved exercises from Programming 2 course in the fourth semester.
 
 The exercises were solved within the [VPL](https://vpl.dis.ulpgc.es/) because of the college. It is a platform that offers a virtual environment for teaching and practicing programming, allowing users to develop and execute code in various languages directly in the browser. It was fundamental to improve my knowledge in this language and it also helped with my Bachelor's Degree in Information Systems at [UDESC](https://www.udesc.br/).
 
 ## 📚 Features
 
-> [!NOTE]
-> In development
-
 Used during the evolution of exercises:
 
 - Graphical interface.
 - Data manipulation.
 - Event handling.
+- JSON.
+- Thread.
 
 ## 📋 Prerequisites
 
